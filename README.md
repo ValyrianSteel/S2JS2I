@@ -1,2 +1,2 @@
 # S2JS2I
-IoT based on StateMachine and JavaScript
+IoT platform based on StateMachine and JavaScript

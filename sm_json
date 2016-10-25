@@ -1,0 +1,196 @@
+{
+"STATES": [
+        {
+                "STATE_NAME": "STATEERROR",
+                "STATE_DATA" : "ERROR",
+                "ENTRY_ACT" : "entry action..."
+        },
+        {
+                "STATE_NAME": "STATE1",
+                "STATE_DATA": "1",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state1",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "11",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "d", 
+                        "TRANS_GURD": "guard_what1",
+                        "TRANS_ACT": "transitionAction..js...", 
+                        "STATE_NEXT": "STATE3"
+                        }
+                ],
+                "TRANS_NUM" : 1,
+                "STATE_PARE": "STATE9"
+        },
+        {
+                "STATE_NAME": "STATE2",
+                "STATE_DATA": "2",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state2",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "21",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "b", 
+                        "TRANS_GURD": "guard_what2",
+                        "TRANS_ACT": "transitionAction..js...", 
+                        "STATE_NEXT": "STATE1" 
+                        }
+                ],
+                "TRANS_NUM" : 1
+        },
+        {
+                "STATE_NAME": "STATE3",
+                "STATE_DATA": "3",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state3",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "31",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "e", 
+                        "TRANS_GURD": "guard_what3",
+                        "TRANS_ACT": "transitionAction..js...", 
+                        "STATE_NEXT": "STATE11" 
+                        }
+                ],
+                "TRANS_NUM" : 1,
+                "STATE_PARE": "STATE10"
+        },
+        {
+                "STATE_NAME": "STATE4",
+                "STATE_DATA": "4",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state4",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "41",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "h", 
+                        "TRANS_GURD": "guard_what41",
+                        "TRANS_ACT": "transitionAction..js...", 
+                        "STATE_NEXT": "STATE5" 
+                        },
+                        {
+                        "TRANS_NAME": "42",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "j",
+                        "TRANS_GURD": "guard_what42",
+                        "TRANS_ACT": "transitionAction..js...",
+                        "STATE_NEXT": "STATE9"
+                        }
+                ],
+                "TRANS_NUM" : 2,
+                "STATE_PARE": "STATE11"
+        },
+        {
+                "STATE_NAME": "STATE5",
+                "STATE_DATA": "5",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state5",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "51",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "*",
+                        "TRANS_GURD": null,
+                        "TRANS_ACT": "transitionAction..js...",
+                        "STATE_NEXT": "STATE10" }
+                ],
+                "TRANS_NUM" : 1,
+                "STATE_PARE": "STATE11"
+        },
+        {
+                "STATE_NAME": "STATE6",
+                "STATE_DATA": "6",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state6"
+        },
+        {},
+        {},
+        {
+                "STATE_NAME": "STATE9",
+                "STATE_DATA": "9",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state9",
+                "STATE_ENTRY": "STATE4",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "91",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "a",
+                        "TRANS_GURD": "guard_what9",
+                        "TRANS_ACT": "transitionAction..js...",
+                        "STATE_NEXT": "STATE3" }
+                ],
+                "TRANS_NUM" : 1
+        },
+        {
+                "STATE_NAME": "STATE10",
+                "STATE_DATA": "10",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state10",
+                "STATE_ENTRY": "STATE9",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "101",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "f",
+                        "TRANS_GURD": "guard_what101",
+                        "TRANS_ACT": "transitionAction..js...",
+                        "STATE_NEXT": "STATE2" },
+                        {
+                        "TRANS_NAME": "102",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "i",
+                        "TRANS_GURD": "guard_what102",
+                        "TRANS_ACT": "transitionAction..js...",
+                        "STATE_NEXT": "STATE6"
+                        }
+                ],
+                "TRANS_NUM" : 2,
+                "STATE_PARE": "STATE9"
+        },
+        {
+                "STATE_NAME": "STATE11",
+                "STATE_DATA": "11",
+                "ENTRY_ACT": "entry action...",
+                "EXIT_ACT": "exit state11",
+                "STATE_ENTRY": "STATE5",
+                "TRANS": [
+                        {
+                        "TRANS_NAME": "111",
+                        "TRANS_TYPE": 0,
+                        "TRANS_COND": "g", 
+                        "TRANS_GURD": "guard_what11",
+                        "TRANS_ACT": "transitionAction..js...", 
+                        "STATE_NEXT": "STATE2" 
+                        }
+                ],
+                "TRANS_NUM" : 1,
+                "STATE_PARE": "STATE10"
+        }
+],
+"EVENTS": [
+        { "EVENT_NAME": "D1", "EVENT_TYPE": 0, "EVENT_COND": "d", "TO_STATE": "STATE3" },
+        { "EVENT_NAME": "E1", "EVENT_TYPE": 0, "EVENT_COND": "e", "TO_STATE": "STATE5" },
+        { "EVENT_NAME": "*1", "EVENT_TYPE": 0, "EVENT_COND": "*", "TO_STATE": "STATE4" },
+        { "EVENT_NAME": "J", "EVENT_TYPE": 0, "EVENT_COND": "j", "TO_STATE": "STATE4" },
+        { "EVENT_NAME": "G", "EVENT_TYPE": 0, "EVENT_COND": "g", "TO_STATE": "STATE2" },
+        { "EVENT_NAME": "B1", "EVENT_TYPE": 0, "EVENT_COND": "b", "TO_STATE": "STATE1" },
+        { "EVENT_NAME": "D2", "EVENT_TYPE": 0, "EVENT_COND": "d", "TO_STATE": "STATE3" },
+        { "EVENT_NAME": "E2", "EVENT_TYPE": 0, "EVENT_COND": "e", "TO_STATE": "STATE5" },
+        { "EVENT_NAME": "K", "EVENT_TYPE": 0, "EVENT_COND": "k", "TO_STATE": "STATE4" },
+        { "EVENT_NAME": "H", "EVENT_TYPE": 0, "EVENT_COND": "h", "TO_STATE": "STATE5" },
+        { "EVENT_NAME": "*2", "EVENT_TYPE": 0, "EVENT_COND": "*", "TO_STATE": "STATE4" },
+        { "EVENT_NAME": "F1", "EVENT_TYPE": 0, "EVENT_COND": "f", "TO_STATE": "STATE2" },
+        { "EVENT_NAME": "B2", "EVENT_TYPE": 0, "EVENT_COND": "b", "TO_STATE": "STATE1" },
+        { "EVENT_NAME": "A", "EVENT_TYPE": 0, "EVENT_COND": "a", "TO_STATE": "STATE3" },
+        { "EVENT_NAME": "F2", "EVENT_TYPE": 0, "EVENT_COND": "f", "TO_STATE": "STATE2" },
+        { "EVENT_NAME": "B3", "EVENT_TYPE": 0, "EVENT_COND": "b", "TO_STATE": "STATE1" },
+        { "EVENT_NAME": "D3", "EVENT_TYPE": 0, "EVENT_COND": "d", "TO_STATE": "STATE3" },
+        { "EVENT_NAME": "I", "EVENT_TYPE": 0, "EVENT_COND": "i", "TO_STATE": "STATE6" }
+]
+}
+
